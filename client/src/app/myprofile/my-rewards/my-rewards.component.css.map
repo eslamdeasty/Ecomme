@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,UAAU,CAAC;EACP,MAAM,EAAC,IAAI;CACd;;AACD,AAAA,WAAW,CAAA;EACP,OAAO,EAAE,IAAI;EACb,eAAe,EAAE,MAAM;EACvB,SAAS,EAAE,gBAAgB;CAC9B",
+    "sources": [
+        "my-rewards.component.scss"
+    ],
+    "names": [],
+    "file": "my-rewards.component.css"
+}

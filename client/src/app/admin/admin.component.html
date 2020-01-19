@@ -1,0 +1,71 @@
+<form action="" class="col-lg-6" [formGroup]="productForm" (ngSubmit)="productRegister()" enctype="multipart/form-data">
+
+    <!-- product name-->
+    <h1 class="text-center display-4 my-4">Add new product</h1>
+
+    <div class="form-group row">
+        <div class="col-md-8 col-sm-10 offset-md-2 offset-sm-1 " id="input-container">
+            <label for="productName"> Product name</label>
+            <input type="text" formControlName="productName" name="productName" class="form-control" id="inputname" placeholder="prdouctName" required>
+            <div class="text-danger" *ngIf="productForm.get('productName').hasError('required')  && productForm.get('productName').touched">Product name is required</div>
+            <div class="text-danger" *ngIf="registeredProduct">Product name is already registered , choose a different name</div>
+
+
+        </div>
+    </div>
+
+    <!-- price -->
+
+
+    <div class="form-group row">
+
+        <div class="col-md-8 col-sm-10 offset-md-2 offset-sm-1 " id="input-container">
+            <label for="price"> Price</label>
+            <input formControlName="price" type="text" name="price" class="form-control" id="inputmobile" placeholder="$$$" required>
+        </div>
+    </div>
+
+    <!-- description -->
+
+
+    <div class="form-group row">
+
+        <div class="col-md-8 col-sm-10 offset-md-2 offset-sm-1 " id="input-container">
+            <label for="description"> Description</label>
+            <textarea formControlName="description" type="text" name="description" class="form-control" id="inputdescription" placeholder="description" required>
+                </textarea>
+
+            <div class="text-danger" *ngIf="productForm.get('description').hasError('required') && productForm.get('description').touched">description is required</div>
+            <div class="text-danger" *ngIf="productForm.get('description').hasError('description') && productForm.get('description').touched">description must be a valid description address</div>
+
+
+        </div>
+    </div>
+
+    <!-- size -->
+
+    <div class="form-group row">
+
+        <div class="col-md-8 col-sm-10 offset-md-2 offset-sm-1 " id="input-container">
+            <label for="size"> Size</label>
+            <input formControlName="size" type="size" name="size" class="form-control" id="inputsize" placeholder="size" required>
+            <div class="text-danger" *ngIf="productForm.get('size').hasError('required') && productForm.get('size').touched">size is required</div>
+        </div>
+    </div>
+
+    <div class=" custom-file col-md-8 col-sm-10 offset-md-2 offset-sm-1 ">
+        <input class="custom-file-input form-control" formControlName="image" type="file" name="image" (change)="selectImage($event)" />
+        <label for="file" class="custom-file-label">Choose File</label>
+    </div>
+
+    <!-- submit-->
+    <div class="form-group row">
+        <div class=" col-md-8 col-sm-10 offset-md-2 offset-sm-1 ">
+            <button name="" id="" class="btn btn-primary btn-block my-3" type="submit" role="button">Add Product</button>
+        </div>
+
+    </div>
+</form>
+
+<>
+    <>

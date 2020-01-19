@@ -1,0 +1,7 @@
+{
+    "env": {
+        "MONGO_ATLAS_PW": "kGYvRbvSl2W1RbxV",
+        "process.env.SECRET_KEY": "secret"
+    }
+
+}

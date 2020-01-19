@@ -1,0 +1,15 @@
+.container {
+  margin: 10px;
+}
+
+.no-rewards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+}
+/*# sourceMappingURL=my-rewards.component.css.map */

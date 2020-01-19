@@ -1,0 +1,121 @@
+.card {
+  border: 1px solid #0bb5eb;
+  border-radius: 15px;
+}
+
+h4 {
+  background: -webkit-gradient(linear, left top, left bottom, from(#0bb5eb), to(#7c7ee2));
+  background: linear-gradient(#0bb5eb, #7c7ee2);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding-bottom: 5px;
+}
+
+#input-container {
+  position: relative;
+}
+
+#input-container > i {
+  position: absolute;
+  left: 25px;
+  top: 8px;
+  padding: 9px 8px;
+  color: #0bb5eb;
+}
+
+#input-container > input {
+  margin: 6px 0;
+  padding: 8px;
+  border-color: #0bb5eb;
+  border-radius: 20px;
+  outline: none;
+  padding-left: 40px;
+}
+
+.btn1 {
+  background: -webkit-gradient(linear, left top, left bottom, from(#7c7ee2), to(#0bb5eb));
+  background: linear-gradient(#7c7ee2, #0bb5eb);
+  border-radius: 20px;
+}
+
+.hr-text {
+  line-height: 1em;
+  position: relative;
+  outline: 0;
+  border: 0;
+  color: black;
+  text-align: center;
+  height: 1.5em;
+}
+
+.hr-text:before {
+  content: '';
+  background: -webkit-gradient(linear, left top, right top, from(transparent), color-stop(#818078), to(transparent));
+  background: linear-gradient(to right, transparent, #818078, transparent);
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  height: 1px;
+}
+
+.hr-text:after {
+  content: attr(data-content);
+  position: relative;
+  display: inline-block;
+  color: black;
+  padding: 0 .5em;
+  line-height: 1.5em;
+  color: #818078;
+  background-color: #fcfcfa;
+}
+
+.btn-facebook {
+  background-color: #2B4B90;
+  color: #fff;
+  border-radius: 20px;
+  outline: 0 !important;
+  position: relative;
+}
+
+.btn-facebook:active {
+  background-color: #2B4B90;
+  color: #fff;
+  border-radius: 20px;
+  outline: 0 !important;
+  position: relative;
+}
+
+.btn-facebook:focus {
+  background-color: #2B4B90;
+  color: #fff;
+  border-radius: 20px;
+  outline: 0 !important;
+  position: relative;
+}
+
+.btn-facebook:hover {
+  background-color: #2B4B90;
+  color: #fff;
+  border-radius: 20px;
+  outline: 0 !important;
+  position: relative;
+}
+
+button i {
+  position: absolute;
+  left: 10px;
+  font-size: 20px;
+  top: 10px;
+  padding-right: 10px;
+  border-right: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.form-control.ng-touched.ng-invalid {
+  border: 1px solid red;
+}
+
+.invalied-textbox {
+  border: 1px solid red;
+}
+/*# sourceMappingURL=register.component.css.map */

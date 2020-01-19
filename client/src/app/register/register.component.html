@@ -1,0 +1,105 @@
+<div class=" mt-5 col-lg-4 col-md-6 col-sm-8 offset-lg-4 offset-md-3 offset-sm-2 card mb-5 ">
+
+
+    <div class=" text-center my-3">
+        <h4 class=text> Sign Up</h4>
+    </div>
+
+    <form action="" [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+
+        <div class="form-group row">
+            <div class="col-md-8 col-sm-10 offset-md-2 offset-sm-1 " id="input-container">
+                <input type="text" formControlName="username" name="username" class="form-control" id="inputname" placeholder="Username" minlength="3" required>
+                <i class="fa fa-user" ></i>
+                <div class="text-danger" *ngIf="registerForm.get('username').hasError('required')  && registerForm.get('username').touched">Username is required</div>
+                <div class="text-danger" *ngIf="userRegistered">Username is already registered</div>
+
+
+            </div>
+        </div>
+
+        <!-- full name -->
+
+
+        <div class="form-group row">
+
+            <div class="col-md-8 col-sm-10 offset-md-2 offset-sm-1 " id="input-container">
+                <input formControlName="mobilenumber" type="text" name="mobilenumber" class="form-control" id="inputmobile" placeholder="Mobile Number" required minlength="11" maxlength="11">
+                <i class="fa fa-phone"></i>
+
+                <div class="text-danger" *ngIf="registerForm.get('mobilenumber').hasError('required')  && registerForm.get('mobilenumber').touched">Mobile number is required</div>
+                <div class="text-danger" *ngIf="registerForm.get('mobilenumber').hasError('minlength') && registerForm.get('mobilenumber').touched">Mobile number must contain 11 numbers</div>
+
+            </div>
+        </div>
+        <!-- mobile number -->
+
+        <div class="form-group row">
+
+            <div class="col-md-8 col-sm-10 offset-md-2 offset-sm-1 " id="input-container">
+                <input formControlName="email" type="email" name="email" class="form-control" id="inputemail" placeholder="Email" required>
+                <i class="fa fa-envelope"></i>
+                <div class="text-danger" *ngIf="registerForm.get('email').hasError('required') && registerForm.get('email').touched">Email is required</div>
+                <div class="text-danger" *ngIf="registerForm.get('email').hasError('email') && registerForm.get('email').touched">Email must be a valid email address</div>
+
+
+            </div>
+        </div>
+        <!-- email -->
+
+        <div class="form-group row">
+
+            <div class="col-md-8 col-sm-10 offset-md-2 offset-sm-1 " id="input-container">
+                <input MatInput formControlName="password" type="password" name="password" class="form-control" id="inputPassword3" placeholder="Password" required>
+                <i class=" fa fa-lock"></i>
+                <div class="text-danger" *ngIf="registerForm.get('password').touched && registerForm.get('password').hasError('required')">Password is required</div>
+                <div class="text-danger" *ngIf="registerForm.get('password').touched && registerForm.get('password').hasError('minlength')">Password must be at least 6 characters</div>
+            </div>
+        </div>
+        <!-- password -->
+
+        <div class="form-group row">
+
+            <div class="col-md-8 col-sm-10 offset-md-2 offset-sm-1 " id="input-container">
+                <input type="password" formControlName="confirmPassword" name="confirmPassword" class="form-control" id="inputPassword" placeholder="Confirm password" required>
+                <i class=" fa fa-lock"></i>
+
+                <div class="text-danger" *ngIf="registerForm.get('confirmPassword').touched && registerForm.get('confirmPassword').hasError('required')">Confirm Password is required</div>
+                <div class="text-danger" *ngIf="registerForm.get('confirmPassword').touched && registerForm.get('confirmPassword').hasError('mustMatch')">Passwords must match</div>
+
+            </div>
+        </div>
+        <!-- confirm password -->
+        <div class="form-group row">
+
+            <div class=" col-md-8 col-sm-10 offset-md-2 offset-sm-1 ">
+
+                <button name="" id="" class="btn btn1 btn-block my-3" type="submit" role="button">Sign Up</button>
+            </div>
+
+        </div>
+        <!-- submit-->
+        <div class=" text-center mb-3 ">
+            <hr class="hr-text " data-content="OR ">
+        </div>
+
+
+        <div class="col-md-8 col-sm-10 offset-md-2 offset-sm-1 mb-4 ">
+            <button class="btn btn-block btn-facebook text-center ">
+          <i class="fa fa-facebook-f mr-1 " aria-hidden="true "></i>
+          Continue With Facebook
+        </button>
+        </div>
+
+        <div class="text-center mb-3 ">
+            <p class="text-muted mb-0 ">Already Registered?</p>
+            <a class="text " routerLink='/login' (click)="openLoginDialog()">LOGIN</a>
+        </div>
+
+    </form>
+
+
+
+
+
+</div>

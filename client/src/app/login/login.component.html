@@ -1,0 +1,22 @@
+<form [formGroup]="loginForm">
+    <div class="example-container">
+        <h2 style="font-weight: 100; text-align: center;">Please sign in</h2>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Email</mat-label>
+            <input matInput formControlName="email" placeholder="Enter Your Email">
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Password</mat-label>
+            <input matInput formControlName="password" type="password" placeholder="Enter Password">
+        </mat-form-field>
+        <div class="text-danger mb-3" *ngIf="wrongPassword"> Password incorrect</div>
+        <button mat-button mat-raised-button color="primary" class="buy-now-button space" (click)="login()">LOGIN
+  </button>
+
+
+        <label style="text-align: center; margin-top: 5px; color:gray">Or</label>
+        <button mat-button mat-stroked-button color="primary" class="button" routerLink="/register" (click)="onNoClick()">SIGNUP NOW
+  </button>
+    </div>
+</form>
